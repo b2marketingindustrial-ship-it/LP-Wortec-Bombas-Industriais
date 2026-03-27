@@ -1,0 +1,39 @@
+'use client';
+import { useState } from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import PainPoints from './components/PainPoints';
+import Solution from './components/Solution';
+import ProductCards from './components/ProductCards';
+import Segments from './components/Segments';
+import Consultative from './components/Consultative';
+import FinalCTA from './components/FinalCTA';
+import ModalForm from './components/ModalForm';
+import Footer from './components/Footer';
+
+export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header onOpenModal={openModal} />
+      
+      <main>
+        <Hero onOpenModal={openModal} />
+        <PainPoints />
+        <Solution />
+        <ProductCards />
+        <Segments />
+        <Consultative />
+        <FinalCTA onOpenModal={openModal} />
+      </main>
+      
+      <Footer />
+      
+      <ModalForm isOpen={isModalOpen} onClose={closeModal} />
+    </div>
+  );
+}
