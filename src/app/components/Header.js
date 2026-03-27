@@ -1,15 +1,16 @@
 'use client';
 import { Phone, Mail, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Header({ onOpenModal }) {
   return (
     <header className="fixed top-0 left-0 w-full z-[80] bg-white/80 backdrop-blur-md border-b border-slate-100">
       <div className="container-custom h-20 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-black text-[#003366] tracking-tighter">
-          WORTEC<span className="text-[#ffd700]">.</span>
-        </div>
+        <Image src="/wortecLogo.webp" 
+        alt="Logo" width={100} height={100} />
+        
 
         {/* Contact info - Desktop */}
         <div className="hidden lg:flex items-center gap-8">

@@ -20,7 +20,7 @@ export default function Solution() {
             shadow-[0_20px_60px_rgba(0,0,0,0.45)] 
             z-10 overflow-hidden border-4 border-white">
               <Image 
-                src="/heroBg.webp" 
+                src="/magnetic-pump.png" 
                 alt="Wortec Solution" 
                 width={500}
                 height={375}

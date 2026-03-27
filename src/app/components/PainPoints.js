@@ -50,7 +50,7 @@ export default function PainPoints() {
             border border-slate-50
             shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
               <Image 
-                src="/magnetic-pump.png" 
+                src="/heroBg.webp" 
                 alt="Falha operacional " 
                 width={500}
                 height={375}
