@@ -22,9 +22,9 @@ export default function Footer() {
 
           {/* Simple Info Line */}
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-center">
-            <span>Av. Industrial, 1000 - Setor Sul</span>
-            <span className="text-[#ffd700]">(81) 3222-2222</span>
-            <span className="lowercase tracking-normal font-bold">contato@wortec.com.br</span>
+            <span>Osasco/SP</span>
+            <span className="text-[#ffd700]">(11) 3839-6900</span>
+            <span className="lowercase tracking-normal font-bold">contato@worteccompressores.com.br</span>
           </div>
 
           {/* Copyright & B2 */}

@@ -16,11 +16,11 @@ export default function Header({ onOpenModal }) {
         <div className="hidden lg:flex items-center gap-8">
           <div className="flex items-center gap-2 text-slate-600 font-bold text-xs tracking-widest">
             <Phone size={16} className="text-[#ffd700]" />
-            (81) 3222-2222
+            (11) 3839-6900
           </div>
           <div className="flex items-center gap-2 text-slate-600 font-bold text-xs tracking-widest">
             <Mail size={16} className="text-[#ffd700]" />
-            contato@wortec.com.br
+            contato@worteccompressores.com.br
           </div>
           <button
             onClick={onOpenModal}
