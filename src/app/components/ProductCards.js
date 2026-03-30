@@ -52,8 +52,11 @@ export default function ProductCards({ onOpenModal }) {
         font-black text-[#003366] mb-8 uppercase tracking-tighter">
           Tipos de <span className="text-blue-500 font-black">Bombas.</span>
         </h2>
-        <p className="text-sm md:text-md text-slate-500 max-w-xl mx-auto font-bold uppercase tracking-wide leading-relaxed">
-          Equipamentos de alta precisão adequados às exigências de cada aplicação.
+        <p className="text-sm md:text-[12px] text-slate-500 
+        max-w-xl mx-auto font-bold uppercase 
+        tracking-wide leading-relaxed">
+          Equipamentos de alta precisão 
+          adequados às exigências de cada aplicação.
         </p>
       </div>
 

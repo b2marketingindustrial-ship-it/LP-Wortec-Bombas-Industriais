@@ -21,9 +21,12 @@ export default function Hero({ onOpenModal }) {
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-16 text-white">
+      <div className="relative 
+      z-20 w-full max-w-7xl 
+      mx-auto px-6 lg:px-16 text-white">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 
+        gap-30 items-center">
           
           {/* Left Column: Text */}
           <motion.div
@@ -31,17 +34,27 @@ export default function Hero({ onOpenModal }) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block px-4 py-1 mb-6 text-[10px] font-black tracking-[0.4em] uppercase bg-[#ffd700] text-[#003366] rounded-sm">
+            <span className="inline-block px-4 
+            py-1 mb-6 text-[10px] 
+            font-black tracking-[0.4em] 
+            uppercase bg-[#ffd700] text-[#003366] rounded-sm">
               TECNOLOGIA INDUSTRIAL AFIRMADA
             </span>
 
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1] mb-8 tracking-tighter uppercase whitespace-pre-line">
+            <h1 className="text-4xl 
+            md:text-5xl lg:text-[45px] 
+            font-black leading-[1.1] 
+            mb-8 tracking-tighter 
+            uppercase whitespace-pre-line">
               Bombas que {"\n"}
               <span className="text-[#ffd700]">impulsionam</span> seu{"\n"}
               processo.
             </h1>
 
-            <p className="text-sm md:text-lg text-white/70 mb-10 leading-relaxed max-w-xl font-medium uppercase tracking-wide">
+            <p className="text-sm md:text-[15px] 
+            text-white/70 mb-10 
+            leading-relaxed max-w-xl 
+            font-medium uppercase tracking-wide">
               Soluções precisas em transferência e dosagem de fluidos para aplicações de alta complexidade. Desempenho onde sua planta mais precisa.
             </p>
 
@@ -64,8 +77,13 @@ export default function Hero({ onOpenModal }) {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="hidden lg:block relative"
           >
-             <div className="absolute -inset-4 bg-[#ffd700]/10 blur-3xl rounded-full" />
-             <div className="relative bg-white/5 backdrop-blur-md rounded-3xl p-1 border border-white/10 shadow-2xl">
+             <div className="absolute -inset-4 
+             bg-[#ffd700]/10 blur-3xl 
+             rounded-full" />
+             <div className="relative 
+             bg-white/5 backdrop-blur-md 
+             rounded-3xl p-1 border 
+             border-white/10 shadow-2xl">
                 <ChatForm />
              </div>
           </motion.div>

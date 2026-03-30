@@ -5,10 +5,18 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function ChatForm() {
   const [messages, setMessages] = useState([
-    { from: "bot", text: "Olá! Para conectar você com um especialista, preciso de algumas informações. Vamos começar?" }
+    { from: "bot", text: "Olá! Para conectar você com um especialista, qual a sua necessidade?" }
   ]);
   const [currentInput, setCurrentInput] = useState("");
-  const [formData, setFormData] = useState({ nome: "", empresa: "", telefone: "", aplicacao: "" });
+  const [formData, setFormData] = useState({ 
+    necessidade: "",
+    finalidade: "",
+    nome: "", 
+    empresa: "", 
+    telefone: "", 
+    email: ""
+  });
+
   const [submitted, setSubmitted] = useState(false);
 
   const numberPattern = /^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$/;
@@ -16,6 +24,23 @@ export default function ChatForm() {
   const handleSend = () => {
     if (!currentInput.trim()) return;
 
+    // 1. Necessidade -> Asks for Finalidade
+    if (!formData.necessidade) {
+      setFormData({ ...formData, necessidade: currentInput });
+      setMessages([...messages, { from: "user", text: currentInput }, { from: "bot", text: "Qual a finalidade do seu projeto?" }]);
+      setCurrentInput("");
+      return;
+    }
+
+    // 2. Finalidade -> Asks for Nome
+    if (!formData.finalidade) {
+      setFormData({ ...formData, finalidade: currentInput });
+      setMessages([...messages, { from: "user", text: currentInput }, { from: "bot", text: "Entendido. Agora, qual o seu nome?" }]);
+      setCurrentInput("");
+      return;
+    }
+
+    // 3. Nome -> Asks for Empresa
     if (!formData.nome) {
       setFormData({ ...formData, nome: currentInput });
       setMessages([...messages, { from: "user", text: currentInput }, { from: "bot", text: "Em qual empresa você trabalha?" }]);
@@ -23,31 +48,39 @@ export default function ChatForm() {
       return;
     }
 
+    // 4. Empresa -> Asks for Telefone
     if (!formData.empresa) {
       setFormData({ ...formData, empresa: currentInput });
-      setMessages([...messages, { from: "user", text: currentInput }, { from: "bot", text: "Qual o seu WhatsApp?" }]);
+      setMessages([...messages, { from: "user", text: currentInput }, { from: "bot", text: "Qual o seu WhatsApp/Telefone para contato?" }]);
       setCurrentInput("");
       return;
     }
 
+    // 5. Telefone -> Asks for Email
     if (!formData.telefone) {
       if (!numberPattern.test(currentInput)) {
-        setMessages([...messages, { from: "bot", text: "Esse número não é válido, insira um número de telefone válido." }]);
+        setMessages([...messages, { from: "bot", text: "Esse número não parece válido. Por favor, insira com o DDD." }]);
         return;
       }
       setFormData({ ...formData, telefone: currentInput });
-      setMessages([...messages, { from: "user", text: currentInput }, { from: "bot", text: "Qual é a sua necessidade ou aplicação?" }]);
+      setMessages([...messages, { from: "user", text: currentInput }, { from: "bot", text: "Poderia nos informar seu melhor e-mail?" }]);
       setCurrentInput("");
       return;
     }
 
-    if (!formData.aplicacao) {
-      setFormData({ ...formData, aplicacao: currentInput });
+    
+    if (!formData.email) {
+      setFormData({ ...formData, email: currentInput });
       setMessages([...messages, { from: "user", text: currentInput }, { from: "bot", text: "Perfeito! Nossa equipe técnica entrará em contato em breve. Obrigado!" }]);
       setSubmitted(true);
       setCurrentInput("");
       return;
     }
+    const message = `Olá! Meu nome é 
+    ${formData.nome} e 
+    trabalho na empresa ${formData.empresa}. Vim pelo chatbot Gostaria de solicitar uma consultoria para a finalidade de ${formData.finalidade}. Meu telefone é ${formData.telefone} 
+    e meu e-mail é ${formData.email}.`;
+    window.location.href = `https://wa.me/5547997280800?text=${encodeURIComponent(message)}`;
   };
 
   return (

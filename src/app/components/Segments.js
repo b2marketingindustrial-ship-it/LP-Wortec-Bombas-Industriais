@@ -19,7 +19,9 @@ export default function Segments({ onOpenModal }) {
         <h2 className="text-3xl md:text-5xl font-black text-[#003366] mb-8 uppercase tracking-tighter">
           Soluções para <span className="text-blue-500 font-black">cada indústria.</span>
         </h2>
-        <p className="text-sm md:text-md text-slate-500 max-w-xl mx-auto font-bold uppercase tracking-wide">
+        <p className="text-sm md:text-[12px] 
+        text-slate-500 max-w-xl mx-auto 
+        font-bold uppercase tracking-wide">
           Tecnologias validadas pelas maiores exigências técnicas de cada setor.
         </p>
       </div>
