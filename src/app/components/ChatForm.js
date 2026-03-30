@@ -58,7 +58,7 @@ export default function ChatForm() {
           <span className="text-white font-bold">B</span>
         </div>
         <div>
-          <p className="text-white font-semibold text-sm">Especialista Parcamp</p>
+          <p className="text-white font-semibold text-sm">Especialista Wortec</p>
           <p className="text-blue-200 text-xs">Responde em minutos</p>
         </div>
         <div className="ml-auto flex items-center gap-1.5">
