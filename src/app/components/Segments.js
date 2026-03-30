@@ -11,7 +11,7 @@ const segments = [
   { name: "Petroquímica", Icon: Fuel }
 ];
 
-export default function Segments() {
+export default function Segments({ onOpenModal }) {
   return (
     <section className="section-padding bg-slate-50">
       <div className="container-custom text-center mb-16 md:mb-20">
@@ -25,7 +25,7 @@ export default function Segments() {
       </div>
 
       <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 px-4 lg:px-0">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 px-4 lg:px-0 mb-16">
           {segments.map((segment, idx) => (
             <motion.div
               key={idx}
@@ -44,6 +44,15 @@ export default function Segments() {
               </h3>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center">
+    <button
+            onClick={onOpenModal}
+            className="group relative inline-flex items-center justify-center px-10 py-5 font-black text-[10px] tracking-[0.4em] bg-[#004a99] text-white rounded-sm overflow-hidden transition-all duration-300 hover:bg-[#003366] active:scale-95 shadow-xl uppercase border-2 border-transparent"
+          >
+            SOLICITAR CONSULTORIA POR SEGMENTO
+          </button>
         </div>
       </div>
     </section>

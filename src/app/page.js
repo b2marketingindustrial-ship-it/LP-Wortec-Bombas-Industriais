@@ -10,6 +10,7 @@ import Consultative from './components/Consultative';
 import FinalCTA from './components/FinalCTA';
 import ModalForm from './components/ModalForm';
 import Footer from './components/Footer';
+import WhatsButton from './components/WhatsButton';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,17 +24,18 @@ export default function Home() {
       
       <main>
         <Hero onOpenModal={openModal} />
-        <PainPoints />
-        <Solution />
-        <ProductCards />
-        <Segments />
-        <Consultative />
+        <PainPoints onOpenModal={openModal} />
+        <Solution onOpenModal={openModal} />
+        <ProductCards onOpenModal={openModal} />
+        <Segments onOpenModal={openModal} />
+        <Consultative onOpenModal={openModal} />
         <FinalCTA onOpenModal={openModal} />
       </main>
       
-      <Footer />
+      <Footer onOpenModal={openModal} />
       
       <ModalForm isOpen={isModalOpen} onClose={closeModal} />
+      <WhatsButton onOpenModal={openModal} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Magnet, Activity, Droplets, FlaskConical, Gauge, Workflow } from 'lucide-react';
+import { Magnet, Activity, Droplets, FlaskConical, Gauge, Workflow, ArrowRight } from 'lucide-react';
 
 const productTypes = [
   {
@@ -42,7 +42,7 @@ const productTypes = [
   }
 ];
 
-export default function ProductCards() {
+export default function ProductCards({ onOpenModal }) {
   return (
     <section className="section-padding bg-white">
       <div className="container-custom text-center mb-16 md:mb-24">
@@ -66,32 +66,41 @@ export default function ProductCards() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group relative bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-[0_40px_80px_-20px_rgba(0,74,153,0.1)] transition-all duration-500"
+              className="group relative bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-[0_40px_80px_-20px_rgba(0,74,153,0.15)] transition-all duration-500 flex flex-col h-full"
             >
-              <div className="h-48 overflow-hidden relative bg-slate-50/50 p-4">
+              <div className="h-56 overflow-hidden relative bg-slate-50/50 p-6">
                 <Image 
                   src={product.image} 
                   alt={product.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-contain group-hover:scale-110 
-                  transition-all duration-700 p-2" 
+                  transition-all duration-700 p-4" 
                 />
                 <div className="absolute inset-0 bg-[#003366]/5 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <div className="p-8">
+              <div className="p-8 flex-1 flex flex-col">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-2.5 bg-slate-50 rounded-lg text-[#003366] group-hover:bg-[#ffd700] transition-colors duration-300">
                     <product.Icon size={20} strokeWidth={2.5} />
                   </div>
                   <h3 className="text-sm font-black text-[#003366] uppercase tracking-tight">{product.title}</h3>
                 </div>
-                <p className="text-[12px] text-slate-500 leading-relaxed font-semibold">
+                <p className="text-[12px] text-slate-500 leading-relaxed font-bold uppercase mb-8 tracking-wide">
                   {product.desc}
                 </p>
+                
+                <div className="mt-auto">
+                   <button
+                    onClick={onOpenModal}
+                    className="flex items-center gap-2 text-[#004a99] font-black text-[10px] tracking-widest uppercase group-hover:text-blue-600 transition-colors"
+                   >
+                     Solicitar Cotação <ArrowRight size={14} className="transform group-hover:translate-x-1 transition-transform" />
+                   </button>
+                </div>
               </div>
               <div className="px-8 pb-8">
-                <div className="h-0.5 w-6 bg-[#ffd700] group-hover:w-full transition-all duration-500" />
+                <div className="h-1 w-6 bg-[#ffd700] group-hover:w-full transition-all duration-500" />
               </div>
             </motion.div>
           ))}
