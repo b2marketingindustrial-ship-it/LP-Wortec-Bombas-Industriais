@@ -25,8 +25,8 @@ export default function Home() {
       <main>
         <Hero onOpenModal={openModal} />
         <PainPoints onOpenModal={openModal} />
-        <Solution onOpenModal={openModal} />
         <ProductCards onOpenModal={openModal} />
+        <Solution  />
         <Segments onOpenModal={openModal} />
         <Consultative onOpenModal={openModal} />
         <FinalCTA onOpenModal={openModal} />
