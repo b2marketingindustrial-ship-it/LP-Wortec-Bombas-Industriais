@@ -26,13 +26,7 @@ export default function Solution() {
         e.preventDefault();
         setLoading(true);
 
-        let utmData = {
-            utm_source: "",
-            utm_medium: "",
-            utm_campaign: "",
-            utm_content: "",
-            utm_term: ""
-        };
+        let utmData = {}
 
         try {
             const savedUtm = localStorage.getItem("utm");
@@ -47,7 +41,7 @@ export default function Solution() {
                 event_type: "CONVERSION",
                 event_family: "CDP",
                 payload: {
-                    conversion_identifier: "[B2]Form Wortec Bombas Industriais",
+                    conversion_identifier: " [B2] FORM WORTEC",
                     name: formData.name,
                     email: formData.email,
                     mobile_phone: formData.phone || "",
@@ -63,7 +57,7 @@ export default function Solution() {
             };
 
             let res = await fetch(
-                "https://api.rd.services/platform/conversions?api_key=eJBjsYwIdDVXDPsSXgzXbIJXMBoszARFmOQw",
+                "https://api.rd.services/platform/conversions?api_key=ZbuvlkNkvmSrkbaiuNYrObuUvCDMgPRoCRgn",
                 {
                     method: "POST",
                     headers: {
@@ -72,12 +66,16 @@ export default function Solution() {
                     body: JSON.stringify(payload),
                 }
             );
+            const result = await res.json();
+
 
             if (!res.ok) {
+                console.log("Erro HTTP:", res.status);
+                console.log("API Error:", result.error || result);
                 setError(true);
                 return;
             }
-            
+            console.log(`Lead enviado com sucesso com as utms ${utmData}`);
             setsucessMsg(true);
             const whatsMsg = `Olá, gostaria de falar com um especialista da Wortec. Meu nome é ${formData.name} e estou 
             interessado na solução de ${formData.product}. Poderiam me ajudar?`;

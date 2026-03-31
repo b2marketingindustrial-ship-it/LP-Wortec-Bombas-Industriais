@@ -17,6 +17,7 @@ export default function useUtm() {
 
     if (hasUtm) {
       localStorage.setItem("utm", JSON.stringify(utmData));
+      console.log("UTMs salvos no localStorage:", utmData);
     }
   }, []);
 }

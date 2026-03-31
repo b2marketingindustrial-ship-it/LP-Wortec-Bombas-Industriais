@@ -25,16 +25,10 @@ export default function ModalForm({ isOpen, onClose }) {
         e.preventDefault();
         setLoading(true);
 
-        let utmData = {
-            utm_source: "",
-            utm_medium: "",
-            utm_campaign: "",
-            utm_content: "",
-            utm_term: ""
-        };
+        let utmData = {}
 
         try {
-            const savedUtm = localStorage.getItem("utm");
+            const savedUtm = localStorage.getItem("utmData");
             if (savedUtm) {
                 utmData = JSON.parse(savedUtm);
             }
@@ -46,7 +40,7 @@ export default function ModalForm({ isOpen, onClose }) {
                 event_type: "CONVERSION",
                 event_family: "CDP",
                 payload: {
-                    conversion_identifier: "[B2]ModalForm Wortec Bombas Industriais",
+                    conversion_identifier: " [B2] MODAL FORM WORTEC",
 
                     name: formData.name,
                     email: formData.email,
@@ -79,12 +73,13 @@ export default function ModalForm({ isOpen, onClose }) {
             const result = await res.json();
 
             if (!res.ok) {
-                console.error("Erro ao enviar para o RD:", result);
+                console.log("Erro HTTP:", res.status);
+                console.log("API Error:", result.error || result);
                 setError(true);
                 return;
             }
             setsucessMsg(true);
-            console.log("Lead enviado com sucesso:", result);
+            console.log(`Lead enviado com os dados de utm ${utmData}`, result);
 
             const whatsMsg = `Olá, gostaria de falar com um especialista da Realiza Car. Meu nome 
                 é ${formData.name} e estou interessado no produto ${formData.product}. 
