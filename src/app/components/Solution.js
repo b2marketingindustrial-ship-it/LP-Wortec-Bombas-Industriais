@@ -79,7 +79,7 @@ export default function Solution() {
             setsucessMsg(true);
             const whatsMsg = `Olá, gostaria de falar com um especialista da Wortec. Meu nome é ${formData.name} e estou 
             interessado na solução de ${formData.product}. Poderiam me ajudar?`;
-            const whatsNumber = '5581992039379'; 
+            const whatsNumber = '11984471850'; 
 
             window.open(`https://wa.me/${whatsNumber}?text=${encodeURIComponent(whatsMsg)}`, '_blank');
             setSubmitted(true);

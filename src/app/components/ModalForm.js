@@ -85,7 +85,7 @@ export default function ModalForm({ isOpen, onClose }) {
                 é ${formData.name} e estou interessado no produto ${formData.product}. 
                 Poderiam me ajudar?.`;
 
-            const whatsNumber = '558192039379';
+            const whatsNumber = '11984471850';
 
             window.open(`https://wa.me/${whatsNumber}?text=${encodeURIComponent(whatsMsg)}`, '_blank');
 
