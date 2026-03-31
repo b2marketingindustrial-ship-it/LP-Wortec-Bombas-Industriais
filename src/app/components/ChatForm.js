@@ -137,7 +137,7 @@ export default function ChatForm() {
       const message = `Olá! Meu nome é ${updatedFormData.nome} e trabalho na empresa ${updatedFormData.empresa}. Vim pelo chatbot. Gostaria de solicitar uma 
       consultoria para a finalidade 
       de ${updatedFormData.finalidade}. Meu telefone é ${updatedFormData.telefone} e meu e-mail é ${updatedFormData.email}.`;
-      window.open = `https://wa.me/11984471850?text=${encodeURIComponent(message)}`;
+      window.open (`https://wa.me/11984471850?text=${encodeURIComponent(message)}`);
     }
   };
 
