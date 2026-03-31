@@ -46,7 +46,7 @@ export default function Consultative({ onOpenModal }) {
             <div className="mt-12">
                <button
                   onClick={onOpenModal}
-                  className="group relative inline-flex items-center justify-center px-12 py-6 font-black text-[10px] tracking-[0.5em] bg-[#ffd700] text-[#003366] rounded-sm overflow-hidden transition-all duration-300 hover:bg-white active:scale-95 shadow-2xl uppercase border-2 border-transparent"
+                  className="group relative inline-flex items-center justify-center px-10 py-5 md:px-12 md:py-6 font-black text-[11px] tracking-[0.14em] bg-[#ffd700] text-[#003366] rounded-sm overflow-hidden transition-all duration-300 hover:bg-white active:scale-95 shadow-2xl uppercase border-2 border-transparent"
                >
                   AGENDAR ANÁLISE TÉCNICA
                </button>

@@ -24,7 +24,7 @@ export default function Header({ onOpenModal }) {
           </div>
           <button
             onClick={onOpenModal}
-            className="bg-[#004a99] text-white px-6 py-3 rounded-xl font-black text-xs tracking-widest hover:bg-[#003366] transition-all transform hover:scale-105 shadow-lg flex items-center gap-2"
+            className="bg-[#004a99] text-white px-5 py-3 rounded-xl font-black text-sm tracking-[0.06em] hover:bg-[#003366] transition-all transform hover:scale-105 shadow-lg flex items-center gap-2"
           >
             <MessageSquare size={14} /> FALE AGORA
           </button>

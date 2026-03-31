@@ -51,7 +51,7 @@ export default function Segments({ onOpenModal }) {
         <div className="text-center">
     <button
             onClick={onOpenModal}
-            className="group relative inline-flex items-center justify-center px-10 py-5 font-black text-[10px] tracking-[0.4em] bg-[#004a99] text-white rounded-sm overflow-hidden transition-all duration-300 hover:bg-[#003366] active:scale-95 shadow-xl uppercase border-2 border-transparent"
+            className="group relative inline-flex items-center justify-center px-9 py-4 md:px-10 md:py-5 font-black text-[11px] tracking-[0.14em] bg-[#004a99] text-white rounded-sm overflow-hidden transition-all duration-300 hover:bg-[#003366] active:scale-95 shadow-xl uppercase border-2 border-transparent"
           >
             SOLICITAR CONSULTORIA POR SEGMENTO
           </button>

@@ -209,7 +209,7 @@ export default function ModalForm({ isOpen, onClose }) {
                                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
                                     <button type="submit" disabled={loading} className="flex-1 
                     bg-green-600 text-white 
-                    font-bold text-lg py-4 rounded-xl transition-all duration-300 hover:scale-[1.02]">
+                    font-extrabold text-base md:text-lg tracking-tight py-4 rounded-xl transition-all duration-300 hover:scale-[1.02]">
                                         {loading ? "Enviando..." : "Enviar Solicitação"}
                                     </button>
                                     <p className="text-xs text-slate-400 text-center flex items-center justify-center gap-1">

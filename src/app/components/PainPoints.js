@@ -38,7 +38,7 @@ export default function PainPoints({ onOpenModal }) {
             <div className="mt-10">
               <button
                 onClick={onOpenModal}
-                className="group relative inline-flex items-center justify-center px-8 py-4 font-black text-[10px] tracking-[0.4em] bg-[#004a99] text-white rounded-sm overflow-hidden transition-all duration-300 hover:bg-[#003366] active:scale-95 shadow-xl uppercase"
+                className="group relative inline-flex items-center justify-center px-8 py-4 font-black text-[11px] tracking-[0.14em] bg-[#004a99] text-white rounded-sm overflow-hidden transition-all duration-300 hover:bg-[#003366] active:scale-95 shadow-xl uppercase"
               >
                 CONSULTAR ESPECIALISTA
               </button>

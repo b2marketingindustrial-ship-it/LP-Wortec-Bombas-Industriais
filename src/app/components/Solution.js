@@ -219,7 +219,7 @@ export default function Solution() {
                                             <button
                                                 type="submit"
                                                 disabled={loading}
-                                                className="w-full group relative flex items-center justify-center gap-3 px-8 py-5 bg-[#ffd700] text-[#003366] font-black text-[11px] tracking-[0.3em] uppercase rounded-lg transition-all duration-300 hover:bg-[#003366] hover:text-white active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed shadow-lg"
+                                                className="w-full group relative flex items-center justify-center gap-3 px-8 py-4 md:py-5 bg-[#ffd700] text-[#003366] font-black text-[12px] tracking-[0.12em] uppercase rounded-lg transition-all duration-300 hover:bg-[#003366] hover:text-white active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed shadow-lg"
                                             >
                                                 {loading ? (
                                                     <Loader2 className="w-5 h-5 animate-spin" />

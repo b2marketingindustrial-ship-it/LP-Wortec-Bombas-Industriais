@@ -96,7 +96,7 @@ export default function ProductCards({ onOpenModal }) {
                 <div className="mt-auto">
                    <button
                     onClick={onOpenModal}
-                    className="flex items-center gap-2 text-[#004a99] font-black text-[10px] tracking-widest uppercase group-hover:text-blue-600 transition-colors"
+                    className="flex items-center gap-2 text-[#004a99] font-black text-[11px] tracking-[0.08em] uppercase group-hover:text-blue-600 transition-colors"
                    >
                      Solicitar Cotação <ArrowRight size={14} className="transform group-hover:translate-x-1 transition-transform" />
                    </button>
