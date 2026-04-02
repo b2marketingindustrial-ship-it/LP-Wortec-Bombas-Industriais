@@ -5,7 +5,7 @@ const nextConfig = {
 
   output: 'export',
   trailingSlash: true,
-  basePath: '/lp/bombasindustriais/',
+  basePath: '/lp/bombasindustriais',
   assetPrefix: '/lp/bombasindustriais/',
 
   images: {
