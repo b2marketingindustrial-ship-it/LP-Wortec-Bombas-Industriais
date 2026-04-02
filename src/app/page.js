@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import PainPoints from './components/PainPoints';
 import Solution from './components/Solution';
 import ProductCards from './components/ProductCards';
 import Segments from './components/Segments';
@@ -24,7 +23,6 @@ export default function Home() {
       
       <main>
         <Hero onOpenModal={openModal} />
-        <PainPoints onOpenModal={openModal} />
         <ProductCards onOpenModal={openModal} />
         <Solution  />
         <Segments onOpenModal={openModal} />

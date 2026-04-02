@@ -11,7 +11,7 @@ export default function Hero({ onOpenModal }) {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-[#003366] via-[#003366]/60 to-transparent z-10" />
         <Image 
-          src="/hero-pump.png" 
+          src="/painImg.png" 
           alt="Industrial Pump" 
           fill
           priority
@@ -46,9 +46,8 @@ export default function Hero({ onOpenModal }) {
             font-black leading-[1.1] 
             mb-8 tracking-tighter 
             uppercase whitespace-pre-line">
-              Bombas que {"\n"}
-              <span className="text-[#ffd700]">impulsionam</span> seu{"\n"}
-              processo.
+              Bombas industriais para&nbsp;
+              <span className="text-[#ffd700]">todas as aplicações.</span>
             </h1>
 
             <p className="text-sm md:text-[15px] 
