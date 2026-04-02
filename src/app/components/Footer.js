@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Image 
-              src="/wortecFooter.webp" 
+              src="/lp/bombasindustriais/wortecFooter.webp" 
               alt="Logo Wortec" 
               width={140} 
               height={40}

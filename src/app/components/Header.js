@@ -10,9 +10,9 @@ export default function Header({ onOpenModal }) {
       <div className="container-custom h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="#hero">
-        <Image src="/logoNav.webp" 
+        <Image src="/lp/bombasindustriais/logoNav.webp" 
           alt="Logo" width={100} height={100}
-          className="w-auto h-auto" />
+          className="w-[200px] h-auto" />
         </Link>
         
 
