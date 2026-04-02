@@ -7,37 +7,37 @@ const productTypes = [
   {
     title: "Bombas Magnéticas",
     desc: "Indicadas para líquidos perigosos ou corrosivos, eliminam selos mecânicos e ajudam a prevenir vazamentos.",
-    image: "/bombasMag.webp",
+    image: "/lp/bombasindustriais//bombasMag.webp",
     Icon: Magnet
   },
   {
     title: "Bombas Centrífugas",
     desc: "Convertem energia mecânica em cinética e pressão. Amplamente utilizadas para movimentação contínua.",
-    image: "/bombasCentrifugas.webp",
+    image: "/lp/bombasindustriais/bombasCentrifugas.webp",
     Icon: Workflow 
   },
   {
     title: "Bombas Dosadoras",
     desc: "Projetadas para dosagem precisa e repetível, entregam quantidades exatas de fluido.",
-    image: "/bombasDosadoras.webp",
+    image: "/lp/bombasindustriais/bombasDosadoras.webp ",
     Icon: Gauge 
   },
   {
     title: "Bombas Sanitárias",
     desc: "Construídas em aço inoxidável com superfícies lisas para fácil limpeza (CIP). Alimentos e farmacêutica.",
-    image: "/bombasSanitarias.webp",
+    image: "/lp/bombasindustriais/bombasSanitarias.webp",
     Icon: Droplets
   },
   {
     title: "Bombas de Engrenagem",
     desc: "Trabalham com deslocamento positivo para fluidos viscosos. Adequadas para óleos e polímeros.",
-    image: "/bombasEngrenagem.webp",
+    image: "/lp/bombasindustriais/bombasEngrenagem.webp",
     Icon: Activity
   },
   {
     title: "Bombas Químicas",
     desc: "Resistentes a líquidos tóxicos ou corrosivos com máxima segurança operacional.",
-    image: "/bombasQuimicas.webp",
+    image: "/lp/bombasindustriais/bombasQuimicas.webp",
     Icon: FlaskConical
   }
 ];

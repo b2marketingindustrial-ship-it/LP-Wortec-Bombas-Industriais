@@ -11,7 +11,7 @@ export default function Hero({ onOpenModal }) {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-[#003366] via-[#003366]/60 to-transparent z-10" />
         <Image 
-          src="/painImg.png" 
+          src="/lp/bombasindustriais/painImg.png" 
           alt="Industrial Pump" 
           fill
           priority

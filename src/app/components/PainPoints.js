@@ -59,7 +59,7 @@ export default function PainPoints({ onOpenModal }) {
             border-4 border-white
             shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
               <Image 
-                src="/painImg.png" 
+                src="/lp/bombasindustriais/painImg.png" 
                 alt="Falha operacional " 
                 width={500}
                 height={375}

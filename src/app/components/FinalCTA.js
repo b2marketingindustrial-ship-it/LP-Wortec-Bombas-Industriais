@@ -46,7 +46,7 @@ export default function FinalCTA({ onOpenModal }) {
             bg-white shadow-[0_30px_70px_rgba(0,51,102,0.25),0_10px_25px_rgba(0,0,0,0.15)] transition-transform 
             duration-500 hover:-translate-y-1">
               <Image
-                src="/painImg.png"
+                src="/lp/bombasindustriais/painImg.png"
                 alt="Bomba Industrial"
                 width={920}
                 height={620}
