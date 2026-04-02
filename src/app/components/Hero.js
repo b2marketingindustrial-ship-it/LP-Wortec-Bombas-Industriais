@@ -5,7 +5,7 @@ import ChatForm from './ChatForm';
 
 export default function Hero({ onOpenModal }) {
   return (
-    <section className="relative min-h-[70vh] flex items-center pt-28 pb-8 overflow-hidden bg-[#003366]">
+    <section id="hero" className="relative min-h-[70vh] flex items-center pt-28 pb-8 overflow-hidden bg-[#003366]">
       
       {/* Background */}
       <div className="absolute inset-0 z-0">

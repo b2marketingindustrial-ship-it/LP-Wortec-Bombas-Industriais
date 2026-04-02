@@ -2,14 +2,18 @@
 import { Phone, Mail, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header({ onOpenModal }) {
   return (
     <header className="fixed top-0 left-0 w-full z-[80] bg-white/80 backdrop-blur-md border-b border-slate-100">
       <div className="container-custom h-20 flex items-center justify-between">
         {/* Logo */}
-        <Image src="/wortecLogo.webp" 
-        alt="Logo" width={100} height={100} />
+        <Link href="#hero">
+        <Image src="/logoNav.webp" 
+          alt="Logo" width={100} height={100}
+          className="w-auto h-auto" />
+        </Link>
         
 
         {/* Contact info - Desktop */}

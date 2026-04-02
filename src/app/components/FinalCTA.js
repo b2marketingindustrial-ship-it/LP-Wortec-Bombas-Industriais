@@ -42,7 +42,9 @@ export default function FinalCTA({ onOpenModal }) {
           >
             <div className="absolute -inset-3 rounded-[1.8rem] bg-gradient-to-br from-[#003366]/20 via-[#004a99]/10 to-[#ffd700]/20 blur-md" />
             <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-[#ffd700]/20 rounded-full blur-2xl" />
-            <div className="relative rounded-[1.6rem] overflow-hidden border border-white/70 bg-white shadow-[0_30px_70px_rgba(0,51,102,0.25),0_10px_25px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:-translate-y-1">
+            <div className="relative rounded-[1.6rem] overflow-hidden border border-white/70 
+            bg-white shadow-[0_30px_70px_rgba(0,51,102,0.25),0_10px_25px_rgba(0,0,0,0.15)] transition-transform 
+            duration-500 hover:-translate-y-1">
               <Image
                 src="/painImg.png"
                 alt="Bomba Industrial"
