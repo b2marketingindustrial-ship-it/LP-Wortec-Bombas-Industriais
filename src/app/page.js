@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Solution from './components/Solution';
@@ -7,33 +7,48 @@ import ProductCards from './components/ProductCards';
 import Segments from './components/Segments';
 import Consultative from './components/Consultative';
 import FinalCTA from './components/FinalCTA';
-import ModalForm from './components/ModalForm';
 import Footer from './components/Footer';
-import WhatsButton from './components/WhatsButton';
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    const tryOpenRD = () => {
+      const rdButton = document.getElementById('rd-floating_button-ly8tcuoc');
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+      if (rdButton) {
+        rdButton.click();
+        return true;
+      }
+
+      return false;
+    };
+
+    if (tryOpenRD()) return;
+
+    const interval = setInterval(() => {
+      if (tryOpenRD()) {
+        clearInterval(interval);
+      }
+    }, 300);
+
+    setTimeout(() => {
+      clearInterval(interval);
+    }, 5000);
+  };
 
   return (
     <div className="min-h-screen bg-white">
       <Header onOpenModal={openModal} />
-      
+
       <main>
         <Hero onOpenModal={openModal} />
         <ProductCards onOpenModal={openModal} />
-        <Solution  />
+        <Solution />
         <Segments onOpenModal={openModal} />
         <Consultative onOpenModal={openModal} />
         <FinalCTA onOpenModal={openModal} />
       </main>
-      
+
       <Footer onOpenModal={openModal} />
-      
-      <ModalForm isOpen={isModalOpen} onClose={closeModal} />
-      <WhatsButton onOpenModal={openModal} />
     </div>
   );
 }

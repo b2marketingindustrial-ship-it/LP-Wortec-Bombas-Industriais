@@ -52,3 +52,19 @@ body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   letter-spacing: -0.01em;
 }
+
+
+/* Esconde os campos UTM fora da tela */
+.bricks-form__field:has(.js-field-cf_utm_campanha),
+.bricks-form__field:has(.js-field-cf_utm_palavra_chave),
+.bricks-form__field:has(.js-field-cf_utm_grupo_anuncio),
+.bricks-form__field:has(.js-field-cf_utm_anuncio_id) {
+  position: absolute !important;
+  left: -9999px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
